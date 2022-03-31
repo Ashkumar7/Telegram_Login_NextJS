@@ -85,7 +85,7 @@ const MainComponent = () => {
                 <div className={styles.card_1}>
                   <Image alt='Telegram Icon by Kalash' src='/svg/telegram.svg' width={70} height={70} />
                   <Group>
-                    <Text size='xl' m='1.5rem 0rem'>
+                    <Text size='lg' m='1.5rem 0rem'>
                       Login With Your TelegramID
                     </Text>
                     <Popover

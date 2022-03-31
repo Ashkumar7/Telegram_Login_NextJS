@@ -1,0 +1,113 @@
+@import '../../index.scss';
+
+/* LoginComponent  */
+
+.login_component_section {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+
+  .login_component_wrapper {
+    width: inherit;
+
+    .card_wrapper {
+      display: grid;
+      row-gap: 1rem;
+
+      .card_1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .card_2 {
+        form {
+          display: grid;
+          grid-auto-flow: row;
+          row-gap: 1rem;
+
+          input {
+            border: 1px solid #2e2e2e;
+            background-color: #232323;
+          }
+
+          input,
+          button {
+            @include break(sm) {
+              width: 30%;
+            }
+
+            margin: auto;
+            width: 70%;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Register Component */
+
+.register_component_section {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+
+  .register_component_wrapper {
+    width: inherit;
+
+    .card_wrapper {
+      display: grid;
+      row-gap: 1rem;
+      padding: 5rem 0rem;
+    }
+
+    .card_1 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card_2 {
+      display: grid;
+      grid-auto-flow: row;
+      row-gap: 1rem;
+
+      @include break(sm) {
+        place-items: center;
+      }
+
+      form {
+        @include break(sm) {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          grid-gap: 2rem;
+          width: 70%;
+          align-items: end;
+        }
+
+        display: grid;
+        grid-gap: 1rem;
+        padding: 0rem 3rem;
+
+        input {
+          border: 1px solid #2e2e2e;
+          background-color: #232323;
+        }
+
+        input,
+        button {
+          width: 100%;
+        }
+
+        label {
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+  }
+}

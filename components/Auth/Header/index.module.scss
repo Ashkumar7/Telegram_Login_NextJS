@@ -1,0 +1,33 @@
+@import '../../../index.scss';
+
+//Mobile-First
+.auth_header_wrapper {
+  border-bottom: 1px solid $border-dark;
+
+  .card_wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    .card_1,
+    .card_2 {
+      display: grid;
+      grid-auto-flow: column;
+      column-gap: 0.5rem;
+      align-items: center;
+      padding: 0.5rem 0rem;
+      cursor: pointer;
+    }
+
+    .card_2 {
+      &:hover {
+        text-decoration: underline;
+      }
+
+      .icon_text_wrapper {
+        height: -webkit-fill-available;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}

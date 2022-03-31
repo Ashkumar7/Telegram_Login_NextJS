@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
+
+$primary-dark: #1c1c1c;
+$secondary-dark: #232323;
+$border-dark: #2e2e2e;
+$font-primary-color: rgb(255, 255, 255, 1);
+$font-secondary-color: #a0a0a0;
+$sm-letter-spacing: 0.025rem;
+
+/* Default */
+.main_wrapper {
+  letter-spacing: $sm-letter-spacing;
+  font-family: Inter, 'san-serif' !important;
+  font-weight: 300 !important;
+  color: $font-primary-color !important;
+}
+
+.container_wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 1024px;
+  width: 100%;
+}
+
+/* Mixin For Breakpoints */
+
+$breakpoints: (
+  sm: 40em,
+  md: 58em,
+  lg: 65em,
+);
+
+@mixin break($size) {
+  @media (min-width: map-get($breakpoints,$size)) {
+    @content;
+  }
+}

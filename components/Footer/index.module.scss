@@ -1,0 +1,16 @@
+@import '../../index.scss';
+
+.footer_wrapper {
+  border-top: 1px solid $border-dark;
+  width: 100%;
+  padding: 0.7rem 0rem;
+
+  .card_wrapper {
+    display: flex;
+    justify-content: center;
+
+    span {
+      margin: 0rem 0.25rem;
+    }
+  }
+}

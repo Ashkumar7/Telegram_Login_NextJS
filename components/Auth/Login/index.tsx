@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import styles from '../index.module.scss';
-import { NumberInput, Button, Text, Container } from '@mantine/core';
+import { NumberInput, Button, Text, Container, Popover, Group, ActionIcon, Anchor } from '@mantine/core';
 import { useForm } from '@mantine/hooks';
 import { useNotifications } from '@mantine/notifications';
-import { CheckIcon, Cross2Icon } from '@radix-ui/react-icons';
+import { CheckIcon, Cross2Icon, OpenInNewWindowIcon } from '@radix-ui/react-icons';
 import { Switch, Case, Default } from 'react-if';
 import Verification from './Verification';
 
@@ -13,6 +13,7 @@ const MainComponent = () => {
     status: false,
     value: null,
   });
+  const [opened, setOpened] = useState(false);
   const [loading, setLoading] = useState(false);
   const notifications = useNotifications();
 
@@ -83,9 +84,31 @@ const MainComponent = () => {
               <Default>
                 <div className={styles.card_1}>
                   <Image alt='Telegram Icon by Kalash' src='/svg/telegram.svg' width={70} height={70} />
-                  <Text size='xl' m='1.5rem 0rem'>
-                    Login With Your TelegramID
-                  </Text>
+                  <Group>
+                    <Text size='xl' m='1.5rem 0rem'>
+                      Login With Your TelegramID
+                    </Text>
+                    <Popover
+                      opened={opened}
+                      onClose={() => setOpened(false)}
+                      target={
+                        <ActionIcon variant='outline' radius={'lg'} size={'lg'} onClick={() => setOpened((o) => !o)}>
+                          <OpenInNewWindowIcon />
+                        </ActionIcon>
+                      }
+                      width={260}
+                      position='bottom'
+                      withArrow>
+                      <div style={{ display: 'flex' }}>
+                        <Text size='sm'>
+                          Start The Bot To Recieve UniqueCode.{' '}
+                          <Anchor href='https://t.me/FrankensteinTheExecutioner_Bot' target='_blank'>
+                            Start Now!
+                          </Anchor>
+                        </Text>
+                      </div>
+                    </Popover>
+                  </Group>
                 </div>
                 <div className={styles.card_2}>
                   <form onSubmit={form.onSubmit((values) => submitHandler(values))}>

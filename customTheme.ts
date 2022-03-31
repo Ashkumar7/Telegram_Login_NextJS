@@ -11,10 +11,13 @@ export const theme: MantineThemeOverride = {
       '#666980',
       '#4d4f66',
       '#34354a',
-      '#2b2c3d',
+      '#232323',
       '#1c1c1c',
       '#0c0d21',
       '#01010a',
     ],
+  },
+  other: {
+    color: '#fff',
   },
 };

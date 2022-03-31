@@ -40,3 +40,8 @@ $breakpoints: (
     @content;
   }
 }
+
+/* Overrides */
+.mantine-bu7jmu {
+  opacity: 0 !important;
+}

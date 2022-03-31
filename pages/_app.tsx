@@ -4,17 +4,17 @@ import '../index.scss';
 import { NotificationsProvider } from '@mantine/notifications';
 import { SessionProvider } from 'next-auth/react';
 import { MantineProvider } from '@mantine/core';
-import { theme } from 'theme';
+import { theme } from 'customTheme';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <SessionProvider session={pageProps.session}>
-      <MantineProvider withGlobalStyles withNormalizeCSS theme={theme}>
+    <MantineProvider withGlobalStyles withNormalizeCSS theme={theme}>
+      <SessionProvider session={pageProps.session}>
         <NotificationsProvider>
           <Component {...pageProps} />
         </NotificationsProvider>
-      </MantineProvider>
-    </SessionProvider>
+      </SessionProvider>
+    </MantineProvider>
   );
 }
 

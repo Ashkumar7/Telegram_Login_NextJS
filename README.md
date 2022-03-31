@@ -29,7 +29,7 @@ CREATE TABLE UserSession {
     id INT UNIQUE NOT NULL,
     telegramId INT UNIQUE NOT NULL,
     encryptedToken VARCHAR(max) NOT NULL,
-    createdOn TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+    createdOn VARCHAR(max) NOT NULL
 }
 ```
 

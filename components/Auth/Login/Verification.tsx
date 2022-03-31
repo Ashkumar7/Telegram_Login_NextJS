@@ -68,8 +68,8 @@ const Verification: React.FC<{ telegramId: number | null }> = ({ telegramId }) =
     <>
       <div className={styles.card_1}>
         <Image alt='Telegram Icon by Kalash' src='/svg/telegram.svg' width={70} height={70} />
-        <Text weight='400' size='md' m='1.5rem 0rem'>
-          Verification With UniqueID
+        <Text weight='400' size='lg' m='1.5rem 0rem'>
+          UniqueID Verification
         </Text>
       </div>
       <div className={styles.card_2}>

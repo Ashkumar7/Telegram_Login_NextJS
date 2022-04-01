@@ -17,6 +17,24 @@
       padding: 0.5rem 0rem;
       cursor: pointer;
     }
+    .card_1 {
+      .visibility {
+        display: none;
+        @include break(lg) {
+          display: flex;
+          align-items: center;
+        }
+
+        hr {
+          height: 2.25rem;
+          margin-right: 0.5rem;
+          border: 0;
+          border-left-width: 1px;
+          border-left-color: #4d4f66;
+          border-left-style: solid;
+        }
+      }
+    }
 
     .card_2 {
       &:hover {

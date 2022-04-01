@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import styles from './index.module.scss';
 import { Container } from '@mantine/core';
+import { HeartIcon } from '@radix-ui/react-icons';
 
 const Footer = () => {
   return (
@@ -8,7 +9,7 @@ const Footer = () => {
       <Container size={1280}>
         <div className={styles.card_wrapper}>
           <span>Made With</span>
-          <Image alt='Heart Icon by Chamestudio on Iconscout' src='/svg/heart.svg' width={25} height={25} />
+          <HeartIcon />
           <span>From Unique And Raizel.</span>
         </div>
       </Container>

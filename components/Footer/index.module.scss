@@ -3,14 +3,16 @@
 .footer_wrapper {
   border-top: 1px solid $border-dark;
   width: 100%;
-  padding: 0.7rem 0rem;
+  padding: 0.5rem 0rem;
 
   .card_wrapper {
     display: flex;
     justify-content: center;
+    align-items: center;
 
     span {
       margin: 0rem 0.25rem;
+      font-size: 0.925rem;
     }
   }
 }

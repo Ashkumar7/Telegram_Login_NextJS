@@ -15,8 +15,10 @@ const AuthHeader: React.FC<{ url: string; text: string }> = ({ url, text }) => {
           <Link href='/' passHref>
             <div className={styles.card_1}>
               <Image alt='Site Logo' src='/svg/site_logo.svg' width={100} height={65} />
-              <Divider orientation='vertical' />
-              <Text ml='0.5rem'>UniqueHub</Text>
+              <div className={styles.visibility}>
+                <hr />
+                <Text ml='0.5rem'>UniqueHub</Text>
+              </div>
             </div>
           </Link>
 

@@ -9,7 +9,7 @@ import { DoubleArrowRightIcon } from '@radix-ui/react-icons';
 const AuthHeader: React.FC<{ url: string; text: string }> = ({ url, text }) => {
   return (
     <div className={styles.auth_header_wrapper}>
-      <Container size={1280} p='xs'>
+      <Container size={1280}>
         <div className={styles.card_wrapper}>
           {/* Left-Side-Item */}
           <Link href='/' passHref>

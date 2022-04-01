@@ -46,7 +46,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                 createdOn: new Date(),
               },
             ]);
-            console.log(createNewSession);
           } else {
             const { data: updateSession } = await supabase
               .from('UserSession')
